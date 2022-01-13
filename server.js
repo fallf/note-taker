@@ -1,4 +1,4 @@
-const htmlRoutes = require('./routes/html-routes');
+const htmlRoutes = require("./routes/html-routes");
 const apiRoutes = require('./routes/api-routes');
 const path = require('path');
 
@@ -17,8 +17,8 @@ app.use(express.urlencoded({extended:true}))
 //     res.send('hello')
 // })
 app.use(express.static(path.join(__dirname, "public")));
-app.use('/',html-routes);
-app.use('/api',api-routes);
+app.use("/",htmlRoutes);
+app.use("/api",apiRoutes);
 
 
 

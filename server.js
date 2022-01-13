@@ -6,7 +6,7 @@ const path = require('path');
 const express = require('express')
 const app = express()
 
-const port = process.env.port || 3005
+const PORT = process.env.PORT || 3005
 
 //middle ware
 app.use(express.json())
@@ -21,12 +21,6 @@ app.use("/",htmlRoutes);
 app.use("/api",apiRoutes);
 
 
-
-
-
-
-
-
-app.listen(port, ()=>{
-    console.log(`app listen on port:${port}`)
+app.listen(PORT, ()=>{
+    console.log(`app listen on port:${PORT}`)
 });
